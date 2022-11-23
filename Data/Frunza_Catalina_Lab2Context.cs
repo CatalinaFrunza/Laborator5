@@ -5,7 +5,7 @@ namespace Frunza_Catalina_Lab2.Data
 {
     public class Frunza_Catalina_Lab2Context : DbContext
     {
-        public Frunza_Catalina_Lab2Context (DbContextOptions<Frunza_Catalina_Lab2Context> options)
+        public Frunza_Catalina_Lab2Context(DbContextOptions<Frunza_Catalina_Lab2Context> options)
             : base(options)
         {
         }
@@ -17,5 +17,9 @@ namespace Frunza_Catalina_Lab2.Data
         public virtual DbSet<Author> Author { get; set; } = null!;
 
         public virtual DbSet<Category> Category { get; set; } = null!;
+
+        public DbSet<Frunza_Catalina_Lab2.Models.Member> Member { get; set; }
+
+        public DbSet<Frunza_Catalina_Lab2.Models.Borrowing> Borrowing { get; set; }
     }
 }
